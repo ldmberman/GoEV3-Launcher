@@ -47,6 +47,7 @@ func main() {
 			c1 := exec.Command(fmt.Sprintf("%s/bin/%s", goPath, files[selection].Name()))
 			c1.Stdout = os.Stdout
 			c1.Stderr = os.Stderr
+			c1.Stdin = os.Stdin
 			_ = c1.Run()
 		}
 	}
