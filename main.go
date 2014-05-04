@@ -45,6 +45,8 @@ func main() {
 			selection--
 		} else if button == Button.Enter {
 			c1 := exec.Command(fmt.Sprintf("%s/bin/%s", goPath, files[selection].Name()))
+			c1.Stdout = os.Stdout
+			c1.Stderr = os.Stderr
 			_ = c1.Run()
 		}
 	}
