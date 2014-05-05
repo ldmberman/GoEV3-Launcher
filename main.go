@@ -40,7 +40,7 @@ func main() {
 		button := Button.WaitAny()
 
 		if button == Button.Down {
-			if selection < len(files) - 1 {
+			if selection < len(files)-1 {
 				selection++
 			}
 		} else if button == Button.Up {
