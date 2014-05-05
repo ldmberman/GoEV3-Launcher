@@ -40,9 +40,13 @@ func main() {
 		button := Button.WaitAny()
 
 		if button == Button.Down {
-			selection++
+			if selection < len(files) - 1 {
+				selection++
+			}
 		} else if button == Button.Up {
-			selection--
+			if selection > 0 {
+				selection--
+			}
 		} else if button == Button.Enter {
 			c1 := exec.Command(fmt.Sprintf("%s/bin/%s", goPath, files[selection].Name()))
 			c1.Stdout = os.Stdout
