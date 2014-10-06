@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/mattrajca/GoEV3/Button"
+	"github.com/ldmberman/GoEV3/Button"
 	"io/ioutil"
 	"log"
 	"os"
